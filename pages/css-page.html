@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #292C35;
+            color: rgb(178, 177, 176);
+            overflow: hidden;
+            font-size: 18px;
+            text-align: center;
+        }
+        .h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-block-start: auto;
+        }
+        .about-section {
+            width: 100%;
+            background: #31353F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .detail-section {
+            width: 100%;
+            background: #31353F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-container {
+            display: flex;
+        }
+        .description-block {
+            color: rgb(178, 177, 176);
+            margin: 20px;
+            padding: 55px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        img {
+            margin-top: 130px;
+            margin-left: 10px;
+            height: fit-content;
+            padding-right: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .table-block {
+            margin: 20px;
+            padding: 60px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100vh;
+            height: 80vh;
+        }
+        th, td {
+            color: rgb(178, 177, 176);
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #292C35;
+            text-align: center;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        footer {
+            background-color: #292C35;
+            color: rgb(178, 177, 176);
+            padding: 1px; 
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cascading Style Sheets (CSS)</h1>
+    </header>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="description-block">
+                <h2>What is CSS?</h2>
+                <p>
+                    CSS, or Cascading Style Sheets, is another essential component of web development that works closely with HTML.
+                    While HTML defines the structure and content of a webpage, CSS controls how that content is presented and styled.
+                    <br><br>
+                    Just like HTML, CSS consists of a series of codes that tell web browsers how to style and format elements on a
+                    webpage. These codes include properties and values that determine attributes such as color, size, spacing, and
+                    layout.
+                    <br><br>
+                    Each CSS rule is made up of a selector and a declaration block. The selector identifies the HTML element to be
+                    styled, while the declaration block contains one or more declarations enclosed in curly braces {}. Each declaration
+                    consists of a property (e.g., color, font-size) and a value (e.g., red, 16px).
+                
+                    CSS allows developers to create visually appealing and responsive websites by customizing the appearance and layout
+                    of HTML elements. It provides flexibility and control over design aspects, enabling the creation of unique and
+                    engaging web experiences.
+                </p>
+                <br>
+                <h2>Understanding CSS</h2>
+                <p>
+                    CSS, or Cascading Style Sheets, enhances web design alongside HTML. Acting as a stylist, it dictates visual aspects
+                    like colors, fonts, and layouts. Through rules and selectors, CSS targets specific HTML elements, applying styles
+                    for customization. Its responsive design capabilities ensure adaptability across devices, optimizing user
+                    experience. CSS empowers designers to create engaging websites with professional aesthetics. It complements HTML by
+                    providing the visual presentation layer, crucial for web development.
+                </p>
+            </div>
+            <div>
+                <img src="/assests/css.jpg" alt="About CSS" width="800" height="800">
+            </div>
+        </div>
+    </section>
+    <section class="detail-section">
+        <div class="about-container">
+            <div class="description-block">
+                <h2>CSS Basics: What You Need to Know</h2>
+                <p>
+                    CSS, or Cascading Style Sheets, is like a set of instructions for styling and formatting web pages. It works
+                    alongside HTML to define how elements on a webpage should look and behave.
+                    <br><br>
+                    Similar to HTML, CSS uses a series of rules and selectors to target specific elements on a webpage. These rules
+                    specify properties such as color, size, font, spacing, and positioning.
+                    <br><br>
+                    When a web browser reads an HTML file, it also reads the associated CSS file to determine how to display the HTML
+                    elements. This allows designers to separate content (HTML) from presentation (CSS), making it easier to manage and
+                    update styles across multiple pages.
+                    <br><br>
+                    CSS selectors can target HTML elements, classes, IDs, or other attributes, giving designers granular control over
+                    styling. Additionally, CSS supports inheritance and cascading, allowing styles to be applied hierarchically and
+                    overridden as needed.
+                    <br><br>
+                    As web design becomes more sophisticated, CSS frameworks and preprocessors are often used to streamline development
+                    and enhance productivity. These tools provide pre-written CSS code and additional features to help designers create
+                    responsive and visually appealing websites.
+                    <br><br>
+                    In summary, CSS plays a crucial role in web design by controlling the appearance and layout of HTML elements. It
+                    allows designers to create visually engaging and user-friendly websites, enhancing the overall browsing experience
+                    for visitors.
+                </p>               
+            </div>
+            <div class="table-block">
+                <table>
+                    <tr>
+                        <th colspan="2">Main CSS Structural Elements</th>
+                    </tr>
+                    <tr>
+                      <th>CSS Element</th>
+                      <th>Explanation</th>
+                    </tr>
+                    <tr>
+                      <td>Selector</td>
+                      <td>Selects the HTML elements to style. It can be a tag name, class, ID, or a combination of these.</td>
+                    </tr>
+                    <tr>
+                      <td>Property</td>
+                      <td>Determines the aspect of the selected element to style, such as color, font-size, or margin.</td>
+                    </tr>
+                    <tr>
+                      <td>Value</td>
+                      <td>Specifies the value of the property, such as a color name, a size in pixels, or a percentage.</td>
+                    </tr>
+                    <tr>
+                      <td>Declaration Block</td>
+                      <td>Contains one or more declarations, enclosed in curly braces, for styling the selected elements.</td>
+                    </tr>
+                    <tr>
+                      <td>Rule</td>
+                      <td>Consists of a selector and a declaration block. It defines how selected elements should be styled.</td>
+                    </tr>
+                    <tr>
+                      <td>Class</td>
+                      <td>Allows styling multiple elements with the same class name. It's defined in CSS with a period (.) followed by the class name.</td>
+                    </tr>
+                    <tr>
+                      <td>ID</td>
+                      <td>Uniquely identifies a single HTML element. It's defined in CSS with a hash (#) followed by the ID name.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy2024 Gayanuka Bulegoda</p>
+    </footer>
+</body>
+</html>

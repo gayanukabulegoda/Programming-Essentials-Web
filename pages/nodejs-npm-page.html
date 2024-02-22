@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodejs-npm</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #21242D;
+            color: rgb(178, 177, 176);
+            overflow: hidden;
+            font-size: 18px;
+            text-align: center;
+        }
+        .h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-block-start: auto;
+        }
+        .about-section {
+            width: 100%;
+            background: #292C35;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .npm-section {
+            width: 100%;
+            background: #292C35;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-container {
+            display: flex;
+        }
+        .description-block {
+            color: rgb(178, 177, 176);
+            margin: 20px;
+            padding: 55px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        .about-section img {
+            margin-top: 130px;
+            margin-left: 10px;
+            height: fit-content;
+            padding-right: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .npm-section img {
+            margin-top: 130px;
+            margin-right: 10px;
+            height: fit-content;
+            padding-left: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        footer {
+            background-color: #21242D;
+            color: rgb(178, 177, 176);
+            padding: 1px; 
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Node.js &amp; NPM</h1>
+    </header>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="description-block">
+                <h2>What is Node.js?</h2>
+                <p>
+                    Node.js is a runtime environment for executing JavaScript code outside of a web browser. Traditionally, JavaScript
+                    was primarily used for creating interactive features within web browsers. However, Node.js extends the capabilities
+                    of JavaScript by allowing it to be run on servers, desktops, and other devices.
+                    <br><br>
+                    Node.js is built on the V8 JavaScript engine, which is the same engine used by the Google Chrome web browser. This
+                    engine compiles JavaScript code into machine code, making it fast and efficient. Node.js also includes a set of
+                    built-in libraries that provide functionality for networking, file system operations, and more.
+                    <br><br>
+                    One of the key features of Node.js is its event-driven, non-blocking I/O model. This means that Node.js can handle
+                    many concurrent connections without getting blocked by I/O operations such as reading from or writing to files or
+                    databases. This makes Node.js particularly well-suited for building scalable, real-time applications, such as web
+                    servers or chat applications.
+                    <br><br>
+                    Node.js has a large and active ecosystem of third-party modules and packages available through the Node Package
+                    Manager (npm). These packages provide additional functionality and allow developers to easily integrate existing
+                    libraries into their applications.
+                    <br><br>
+                    In summary, Node.js allows developers to use JavaScript to build server-side applications, leveraging the language's
+                    flexibility and familiarity. It's well-suited for building scalable, real-time applications, and has a thriving
+                    ecosystem of tools and libraries to support development.
+                </p>
+            </div>
+            <div>
+                <img src="/assests/nodejs.jpg" alt="About Node.js" width="800" height="800">
+            </div>
+        </div>
+    </section>
+    <section class="npm-section">
+        <div class="about-container">
+            <div>
+                <img src="/assests/npm.jpg" alt="About NPM" width="800" height="800">
+            </div>
+            <div class="description-block">
+                <h2>What is NPM?</h2>
+                <p>
+                    NPM, short for Node Package Manager, is a command-line tool that comes bundled with Node.js, a popular JavaScript
+                    runtime environment. It serves as a centralized repository for developers to discover, share, and manage JavaScript
+                    packages, also known as modules or libraries.
+                
+                    At its core, NPM simplifies the process of integrating external code into JavaScript projects. Instead of writing
+                    every piece of functionality from scratch, developers can leverage existing packages from the NPM registry to add
+                    features, solve common problems, or enhance their applications.
+                
+                    One of the key advantages of NPM is its extensive collection of packages, which cover a wide range of
+                    functionalities and use cases. These packages are maintained by developers worldwide and cover areas such as web
+                    development, server-side programming, data manipulation, utility functions, and more.
+                    <br><br>
+                    Using NPM is straightforward. Developers can install packages into their projects using simple commands like npm
+                    install package-name. NPM automatically handles dependencies, ensuring that all required packages are downloaded and
+                    integrated seamlessly. Additionally, NPM provides tools for managing package versions, updating dependencies, and
+                    handling conflicts.
+                    <br><br>
+                    Furthermore, NPM facilitates collaboration and code sharing within the JavaScript community. Developers can publish
+                    their own packages to the NPM registry, making them accessible to others around the world. This fosters an ecosystem
+                    of open-source development, where developers can contribute to and benefit from shared codebases.
+                    <br><br>
+                    Overall, NPM plays a crucial role in the JavaScript ecosystem, empowering developers to build robust, feature-rich
+                    applications more efficiently by leveraging the collective knowledge and efforts of the community.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy2024 Gayanuka Bulegoda</p>
+    </footer>
+</body>
+</html>

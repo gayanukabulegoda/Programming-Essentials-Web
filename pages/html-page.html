@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #24272f;
+            color: rgb(178, 177, 176);
+            overflow: hidden;
+            font-size: 18px;
+            text-align: center;
+        }
+        .h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-block-start: auto;
+        }
+        .about-section {
+            width: 100%;
+            background: #2B2E37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .detail-section {
+            width: 100%;
+            background: #2B2E37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-container {
+            display: flex;
+        }
+        .description-block {
+            color: rgb(178, 177, 176);
+            margin: 20px;
+            padding: 55px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        img {
+            margin-top: 130px;
+            margin-left: 10px;
+            height: fit-content;
+            padding-right: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .table-block {
+            margin: 20px;
+            padding: 60px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100vh;
+            height: 80vh;
+        }
+        th, td {
+            color: rgb(178, 177, 176);
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #24272f;
+            text-align: center;
+        }
+        /* Align items in the first column to center */
+        td:first-child {
+            text-align: center;
+        }
+        footer {
+            background-color: #24272f;
+            color: rgb(178, 177, 176);
+            padding: 1px; 
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HyperText Markup Language (HTML)</h1>
+    </header>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="description-block">
+                <h2>What is HTML?</h2>
+                <p>
+                    HTML, or HyperText Markup Language, is a special set of codes used to create web pages that you see on
+                    the Internet.
+                    These codes give instructions to web browsers on how to display text and pictures on a webpage.
+                    <br><br>
+                    Each part of this code, which is marked by symbols like "&it;" and "&gt;", is called an element or a
+                    tag.
+                    Some of these elements come in pairs, with one starting and the other ending.
+                    They work together to show when something on the webpage should begin or stop showing up.
+                    For example, if you want to make a word bold, you use a pair of tags: &lt;b&gt; to start and &lt;/b&gt;
+                    to end the boldness.
+                </p>
+                <br>
+                <h2>Understanding HTML</h2>
+                <p>
+                    HTML, or HyperText Markup Language, is like a language for computers that helps create websites.
+                    It's easy to understand and gets more powerful as time goes on.
+                    With HTML, you can make different parts of a webpage, like headings, paragraphs, images, and links.
+                    <br><br>
+                    When you click on special text called hyperlinks, HTML helps you move to new pages on the Internet.
+                    'Markup' is what HTML tags do to the text inside them.
+                    They make it stand out, like making words bold or italicized.
+                    <br><br>
+                    So, HTML is like the building blocks of a webpage.
+                    It helps you create different parts of a webpage and makes them look the way you want.
+                    And when you click on hyperlinks, HTML helps you explore the internet and find new things.
+                </p>
+            </div>
+            <div>
+                <img src="/assests/html.jpg" alt="About HTML" width="800" height="800">
+            </div>
+        </div>
+    </section>
+    <section class="detail-section">
+        <div class="about-container">
+            <div class="table-block">
+                <table>
+                    <tr>
+                        <th colspan="2">Main HTML Structural Elements</th>
+                    </tr>
+                    <tr>
+                      <th>HTML Element</th>
+                      <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;div&gt;</td>
+                        <td>Defines a division or a section in an HTML document. It's commonly used to group and style content.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;span&gt;</td>
+                        <td>Defines an inline container used to wrap text or other inline elements. It's often used for styling purposes or to target specific parts of text with CSS or JavaScript.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td>Defines a section of navigation links for navigating within the current document or to other documents. It's typically used to create menus or navigation bars.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt;</td>
+                        <td>Represents the introductory content or a group of introductory content in a document. It's commonly used to define the header section of a webpage, which may contain headings, logos, navigation menus, and other introductory elements.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td>Defines the footer section of a webpage, typically containing information about the author, copyright, contact information, or links to related pages.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td>Represents an independent piece of content that can be reused or syndicated. It's often used for blog posts, news articles, forum posts, or comments.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;</td>
+                        <td>Defines a thematic grouping of content within a document. It's used to divide content into different sections or chapters, making it easier to structure and style.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="description-block">
+                <h2>HTML Basics: What You Need to Know</h2>
+                <p>
+                    HTML is like a series of short codes typed into a text file. 
+                    These codes, known as tags, are the building blocks of HTML. 
+                    You save this text as an HTML file and then view it through a web browser. 
+                    <br><br>
+                    The browser reads the file and turns the text into something you can see on a webpage. 
+                    To make sure your webpage looks right, you have to use these tags correctly.
+                    Tags are what make HTML different from regular text. 
+                    They're the words between angle brackets (&lt; and &gt;) that allow things like graphics, images, and tables to appear on a webpage. 
+                    Each tag has its own job.<br><br>Some tags help with formatting text, while others do different things. 
+                    As websites become more complex, they might use Cascading Style Sheets (CSS) and JavaScript. 
+                    CSS helps make web pages look better, and JavaScript adds extra features to basic HTML.
+                </p>
+                <br>
+                <h2>HTML vs XML</h2>
+                <p>
+                    HTML and XML are both types of markup languages, but they work differently. 
+                    HTML has fixed tags that define how content is displayed. 
+                    For example, &lt;p&gt; is used for paragraphs, and &lt;h1&gt; is used for headings. 
+                    <br><br>
+                    In contrast, XML allows users to create their own tags to mark up content. 
+                    For instance, one person might use &lt;footnote&gt; to mark a footnote, while another might use &lt;annotation&gt;.
+                </p>                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy2024 Gayanuka Bulegoda</p>
+    </footer>
+</body>
+</html>

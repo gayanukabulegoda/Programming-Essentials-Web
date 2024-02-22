@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #262930;
+            color: rgb(178, 177, 176);
+            overflow: hidden;
+            font-size: 18px;
+            text-align: center;
+        }
+        .h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-block-start: auto;
+        }
+        .about-section {
+            width: 100%;
+            background: #2D3039;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .detail-section {
+            width: 100%;
+            background: #2D3039;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-container {
+            display: flex;
+        }
+        .description-block {
+            color: rgb(178, 177, 176);
+            margin: 20px;
+            padding: 55px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        img {
+            margin-top: 130px;
+            margin-left: 10px;
+            height: fit-content;
+            padding-right: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .table-block {
+            margin: 20px;
+            padding: 60px;
+            font-size: 20px;
+            text-align: start;
+            text-transform: none;
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100vh;
+            height: 80vh;
+        }
+        th, td {
+            color: rgb(178, 177, 176);
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #262930;
+            text-align: center;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        footer {
+            background-color: #262930;
+            color: rgb(178, 177, 176);
+            padding: 1px; 
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java</h1>
+    </header>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="description-block">
+                <h2>What is Java?</h2>
+                <p>
+                    Java is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle
+                    Corporation). It is designed to be platform-independent, meaning that Java programs can run on any device or
+                    platform that has a Java Virtual Machine (JVM) installed.
+                    <br><br>
+                    Java's platform independence is achieved through the concept of "write once, run anywhere" (WORA). This means that
+                    Java code can be written once and then executed on any device or operating system that supports Java.
+                    <br><br>
+                    Java is widely used for developing a variety of applications, including web applications, mobile apps, desktop
+                    applications, enterprise software, and more. It is known for its robustness, portability, and security features.
+                    <br><br>
+                    One of the key features of Java is its "bytecode" compilation model. Java source code is compiled into bytecode,
+                    which is then executed by the JVM. This allows Java programs to be executed quickly and efficiently, while also
+                    providing a layer of abstraction from the underlying hardware.
+                    <br><br>
+                    Java is also known for its extensive standard library, which provides a wide range of pre-built classes and methods
+                    for common programming tasks. Additionally, Java has a strong community of developers and a wealth of third-party
+                    libraries and frameworks available for building various types of applications.
+                    <br><br>
+                    In summary, Java is a versatile and widely-used programming language known for its platform independence,
+                    robustness, and extensive ecosystem of tools and libraries. It is a popular choice for building a wide range of
+                    applications, from simple web apps to complex enterprise systems.
+                </p>
+            </div>
+            <div>
+                <img src="/assests/java.jpg" alt="About Java" width="800" height="800">
+            </div>
+        </div>
+    </section>
+    <section class="detail-section">
+        <div class="about-container">
+            <div class="description-block">
+                <h2>Java Basics: What You Need to Know</h2>
+                <p>
+                    Java is a programming language that's used to create all sorts of computer programs. It's kind of like a tool that
+                    programmers use to build things like websites, mobile apps, and even big software systems used by companies.
+                    <br><br>
+                    One cool thing about Java is that it doesn't care what kind of computer or device you're using. Whether you're on a
+                    Windows computer, a Mac, or even a smartphone, Java programs can work on all of them. That's because Java is
+                    designed to be "write once, run anywhere." This means that once you write a Java program, it can run on lots of
+                    different devices without needing to change anything.
+                    <br><br>
+                    When programmers write Java code, they're basically giving instructions to the computer. These instructions can tell
+                    the computer to do all kinds of things, like calculate numbers, show messages on the screen, or even play games.
+                    <br><br>
+                    Java is really popular because it's not only powerful but also safe and reliable. It has a special way of running
+                    programs called the Java Virtual Machine, which helps keep things running smoothly and securely.
+                    <br><br>
+                    Another great thing about Java is that there are lots of tools and resources available to help programmers. There's
+                    a big community of people who use Java, so you can always find help if you need it.
+                    <br><br>
+                    In a nutshell, Java is a versatile programming language that lets you create all sorts of programs that can run on
+                    different devices. It's popular because it's powerful, safe, and supported by a large community of developers.
+                </p>
+            </div>
+            <div class="table-block">
+                <table>
+                    <tr>
+                        <th colspan="2">Main Java Elements</th>
+                    </tr>
+                    <tr>
+                        <th>Java Element</th>
+                        <th>Explanation</th>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td>A blueprint or template for creating objects. It defines the properties and behaviors of objects of a certain
+                            type.</td>
+                    </tr>
+                    <tr>
+                        <td>Method</td>
+                        <td>A block of code that performs a specific task. Methods are defined within classes and can be called to execute
+                            their functionality.</td>
+                    </tr>
+                    <tr>
+                        <td>Variable</td>
+                        <td>A container used to store data. Variables can hold different types of data, such as numbers, text, or objects.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Object</td>
+                        <td>An instance of a class. Objects have state (represented by fields or variables) and behavior (represented by
+                            methods).</td>
+                    </tr>
+                    <tr>
+                        <td>Constructor</td>
+                        <td>A special method used for initializing objects. It has the same name as the class and is called automatically
+                            when an object is created.</td>
+                    </tr>
+                    <tr>
+                        <td>Inheritance</td>
+                        <td>A mechanism that allows a class to inherit properties and behaviors from another class. It promotes code reuse
+                            and supports the concept of "is-a" relationships.</td>
+                    </tr>
+                    <tr>
+                        <td>Interface</td>
+                        <td>A reference type similar to a class but with only abstract methods and constants. It defines a contract for
+                            classes that implement it.</td>
+                    </tr>
+                    <tr>
+                        <td>Package</td>
+                        <td>A namespace that organizes a set of related classes and interfaces. It helps in organizing and managing Java
+                            code.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy2024 Gayanuka Bulegoda</p>
+    </footer>
+</body>
+</html>
