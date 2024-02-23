@@ -1,212 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
+    <link rel="icon" href="/assests/icon/javaScript.ico" />
     <style>
-        * {
-            font-family: Arial;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #262831;
-            color: rgb(178, 177, 176);
-            overflow: hidden;
-            font-size: 18px;
-            text-align: center;
-        }
-        .h1 {
-            font-size: 30px;
-            text-align: center;
-            margin-block-start: auto;
-        }
-        .about-section {
-            width: 100%;
-            background: #2E303A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .detail-section {
-            width: 100%;
-            background: #2E303A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .about-container {
-            display: flex;
-        }
-        .description-block {
-            color: rgb(178, 177, 176);
-            margin: 20px;
-            padding: 55px;
-            font-size: 20px;
-            text-align: start;
-            text-transform: none;
-            margin-bottom: 10px;
-        }
-        img {
-            margin-top: 130px;
-            margin-left: 10px;
-            height: fit-content;
-            padding-right: 30px;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-        .table-block {
-            margin: 20px;
-            padding: 60px;
-            font-size: 20px;
-            text-align: start;
-            text-transform: none;
-            margin-bottom: 10px;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100vh;
-            height: 80vh;
-        }
-        th, td {
-            color: rgb(178, 177, 176);
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #262831;
-            text-align: center;
-        }
-        td:first-child {
-            text-align: center;
-        }
-        footer {
-            background-color: #262831;
-            color: rgb(178, 177, 176);
-            padding: 1px; 
-            font-size: 18px;
-            text-align: center;
-        }
+      * {
+        font-family: Arial;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #262831;
+        color: rgb(178, 177, 176);
+        overflow: hidden;
+        font-size: 18px;
+        text-align: center;
+      }
+      .h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-block-start: auto;
+      }
+      .about-section {
+        width: 100%;
+        background: #2e303a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .detail-section {
+        width: 100%;
+        background: #2e303a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-container {
+        display: flex;
+      }
+      .description-block {
+        color: rgb(178, 177, 176);
+        margin: 20px;
+        padding: 55px;
+        font-size: 20px;
+        text-align: start;
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      img {
+        margin-top: 130px;
+        margin-left: 10px;
+        height: fit-content;
+        padding-right: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+      .table-block {
+        margin: 20px;
+        padding: 60px;
+        font-size: 20px;
+        text-align: start;
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100vh;
+        height: 80vh;
+      }
+      th,
+      td {
+        color: rgb(178, 177, 176);
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #262831;
+        text-align: center;
+      }
+      td:first-child {
+        text-align: center;
+      }
+      footer {
+        background-color: #262831;
+        color: rgb(178, 177, 176);
+        padding: 1px;
+        font-size: 18px;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>JavaScript (Js)</h1>
+      <h1>JavaScript (Js)</h1>
     </header>
     <section class="about-section">
-        <div class="about-container">
-            <div class="description-block">
-                <h2>What is JavaScript?</h2>
-                <p>
-                    JavaScript is a programming language commonly used in web development to add interactivity and dynamic behavior to
-                    websites. It allows developers to create interactive elements, handle user input, manipulate content, and respond to
-                    events on web pages.
-                    <br><br>
-                    Similar to HTML and CSS, JavaScript is interpreted by web browsers, enabling client-side scripting. It works in
-                    conjunction with HTML and CSS, enhancing the functionality and user experience of web applications.
-                    <br><br>
-                    In JavaScript, code is written in scripts, which are embedded directly into HTML or included as separate files.
-                    These scripts consist of statements and expressions that control the behavior of web pages.
-                    <br><br>
-                    JavaScript uses objects and functions to organize code and perform tasks. Objects represent real-world entities,
-                    while functions are blocks of reusable code that execute specific actions.
-                    <br><br>
-                    One of the key features of JavaScript is its ability to interact with HTML elements, enabling dynamic updates to the
-                    content and structure of web pages without requiring a full page reload.
-                    <br><br>
-                    As web development evolves, JavaScript frameworks and libraries, such as React.js and Vue.js, provide additional
-                    tools and abstractions to streamline development and build complex web applications more efficiently.
-                    <br><br>
-                    In summary, JavaScript is a versatile programming language that empowers developers to create interactive and
-                    engaging web experiences. It complements HTML and CSS by adding functionality and interactivity to web pages, making
-                    them more dynamic and responsive to user interactions.
-                </p>
-            </div>
-            <div>
-                <img src="/assests/javaScript.jpg" alt="About JavaScript" width="800" height="800">
-            </div>
+      <div class="about-container">
+        <div class="description-block">
+          <h2>What is JavaScript?</h2>
+          <p>
+            JavaScript is a programming language commonly used in web
+            development to add interactivity and dynamic behavior to websites.
+            It allows developers to create interactive elements, handle user
+            input, manipulate content, and respond to events on web pages.
+            <br /><br />
+            Similar to HTML and CSS, JavaScript is interpreted by web browsers,
+            enabling client-side scripting. It works in conjunction with HTML
+            and CSS, enhancing the functionality and user experience of web
+            applications.
+            <br /><br />
+            In JavaScript, code is written in scripts, which are embedded
+            directly into HTML or included as separate files. These scripts
+            consist of statements and expressions that control the behavior of
+            web pages.
+            <br /><br />
+            JavaScript uses objects and functions to organize code and perform
+            tasks. Objects represent real-world entities, while functions are
+            blocks of reusable code that execute specific actions.
+            <br /><br />
+            One of the key features of JavaScript is its ability to interact
+            with HTML elements, enabling dynamic updates to the content and
+            structure of web pages without requiring a full page reload.
+            <br /><br />
+            As web development evolves, JavaScript frameworks and libraries,
+            such as React.js and Vue.js, provide additional tools and
+            abstractions to streamline development and build complex web
+            applications more efficiently.
+            <br /><br />
+            In summary, JavaScript is a versatile programming language that
+            empowers developers to create interactive and engaging web
+            experiences. It complements HTML and CSS by adding functionality and
+            interactivity to web pages, making them more dynamic and responsive
+            to user interactions.
+          </p>
         </div>
+        <div>
+          <img
+            src="/assests/img/javaScript.jpg"
+            alt="About JavaScript"
+            width="800"
+            height="800"
+          />
+        </div>
+      </div>
     </section>
     <section class="detail-section">
-        <div class="about-container">
-            <div class="table-block">
-                <table>
-                    <tr>
-                        <th colspan="2">Main JavaScript Elements</th>
-                    </tr>
-                    <tr>
-                        <th>JavaScript Element</th>
-                        <th>Explanation</th>
-                      </tr>
-                      <tr>
-                        <td>Variable</td>
-                        <td>Used to store data values. Variables can hold various types of data, such as numbers, strings, or objects.</td>
-                      </tr>
-                      <tr>
-                        <td>Function</td>
-                        <td>A block of code designed to perform a particular task. Functions can be reused and called multiple times.</td>
-                      </tr>
-                      <tr>
-                        <td>Conditional Statement</td>
-                        <td>Allows you to execute different code based on different conditions. Common conditional statements include if, else if, and else.</td>
-                      </tr>
-                      <tr>
-                        <td>Loop</td>
-                        <td>Used to repeatedly execute a block of code until a specified condition is met. Common loop types include for, while, and do-while.</td>
-                      </tr>
-                      <tr>
-                        <td>Object</td>
-                        <td>A collection of related data and functionalities. Objects consist of properties (variables) and methods (functions).</td>
-                      </tr>
-                      <tr>
-                        <td>Array</td>
-                        <td>A special type of object used to store multiple values in a single variable. Arrays can hold various data types and are indexed starting from zero.</td>
-                      </tr>
-                      <tr>
-                        <td>Event</td>
-                        <td>Represents an occurrence or interaction on a web page, such as a mouse click, keypress, or page load. JavaScript can respond to events and trigger corresponding actions.</td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="description-block">
-                  <h2>JavaScript Basics: What You Need to Know</h2>
-                <p>
-                    JavaScript is a versatile programming language used to add interactivity and dynamic functionality to websites. It
-                    complements HTML and CSS by providing the ability to manipulate webpage content in response to user actions and
-                    events.
-                    <br><br>
-                    In JavaScript, code is written in scripts, which are embedded directly into HTML documents or included as separate
-                    files. These scripts contain instructions that control the behavior of web pages, allowing developers to create
-                    interactive elements, handle user input, and update content dynamically.
-                    <br><br>
-                    Just like HTML tags, JavaScript functions as the backbone of web development, enabling developers to create engaging
-                    and responsive web experiences. By using JavaScript, developers can enhance the functionality of a webpage, making
-                    it more interactive and user-friendly.
-                    <br><br>
-                    JavaScript works alongside HTML and CSS, forming the foundation of modern web development. While HTML defines the
-                    structure and content of a webpage, and CSS handles its presentation and styling, JavaScript adds functionality and
-                    interactivity, making web pages more dynamic and engaging.
-                    <br><br>
-                    As web development evolves, JavaScript frameworks and libraries, such as React.js and Angular.js, provide additional
-                    tools and resources to streamline development and build complex web applications more efficiently.
-                    <br><br>
-                    In summary, JavaScript is a powerful programming language that empowers developers to create dynamic and interactive
-                    web experiences. It enhances the functionality of HTML and CSS, enabling the creation of modern and responsive
-                    websites.
-                </p>           
-            </div>
+      <div class="about-container">
+        <div class="table-block">
+          <table>
+            <tr>
+              <th colspan="2">Main JavaScript Elements</th>
+            </tr>
+            <tr>
+              <th>JavaScript Element</th>
+              <th>Explanation</th>
+            </tr>
+            <tr>
+              <td>Variable</td>
+              <td>
+                Used to store data values. Variables can hold various types of
+                data, such as numbers, strings, or objects.
+              </td>
+            </tr>
+            <tr>
+              <td>Function</td>
+              <td>
+                A block of code designed to perform a particular task. Functions
+                can be reused and called multiple times.
+              </td>
+            </tr>
+            <tr>
+              <td>Conditional Statement</td>
+              <td>
+                Allows you to execute different code based on different
+                conditions. Common conditional statements include if, else if,
+                and else.
+              </td>
+            </tr>
+            <tr>
+              <td>Loop</td>
+              <td>
+                Used to repeatedly execute a block of code until a specified
+                condition is met. Common loop types include for, while, and
+                do-while.
+              </td>
+            </tr>
+            <tr>
+              <td>Object</td>
+              <td>
+                A collection of related data and functionalities. Objects
+                consist of properties (variables) and methods (functions).
+              </td>
+            </tr>
+            <tr>
+              <td>Array</td>
+              <td>
+                A special type of object used to store multiple values in a
+                single variable. Arrays can hold various data types and are
+                indexed starting from zero.
+              </td>
+            </tr>
+            <tr>
+              <td>Event</td>
+              <td>
+                Represents an occurrence or interaction on a web page, such as a
+                mouse click, keypress, or page load. JavaScript can respond to
+                events and trigger corresponding actions.
+              </td>
+            </tr>
+          </table>
         </div>
+        <div class="description-block">
+          <h2>JavaScript Basics: What You Need to Know</h2>
+          <p>
+            JavaScript is a versatile programming language used to add
+            interactivity and dynamic functionality to websites. It complements
+            HTML and CSS by providing the ability to manipulate webpage content
+            in response to user actions and events.
+            <br /><br />
+            In JavaScript, code is written in scripts, which are embedded
+            directly into HTML documents or included as separate files. These
+            scripts contain instructions that control the behavior of web pages,
+            allowing developers to create interactive elements, handle user
+            input, and update content dynamically.
+            <br /><br />
+            Just like HTML tags, JavaScript functions as the backbone of web
+            development, enabling developers to create engaging and responsive
+            web experiences. By using JavaScript, developers can enhance the
+            functionality of a webpage, making it more interactive and
+            user-friendly.
+            <br /><br />
+            JavaScript works alongside HTML and CSS, forming the foundation of
+            modern web development. While HTML defines the structure and content
+            of a webpage, and CSS handles its presentation and styling,
+            JavaScript adds functionality and interactivity, making web pages
+            more dynamic and engaging.
+            <br /><br />
+            As web development evolves, JavaScript frameworks and libraries,
+            such as React.js and Angular.js, provide additional tools and
+            resources to streamline development and build complex web
+            applications more efficiently.
+            <br /><br />
+            In summary, JavaScript is a powerful programming language that
+            empowers developers to create dynamic and interactive web
+            experiences. It enhances the functionality of HTML and CSS, enabling
+            the creation of modern and responsive websites.
+          </p>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <p>&copy2024 Gayanuka Bulegoda</p>
+      <p>&copy2024 Gayanuka Bulegoda</p>
     </footer>
-</body>
+  </body>
 </html>

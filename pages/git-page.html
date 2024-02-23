@@ -1,102 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git</title>
+    <link rel="icon" href="/assests/icon/git.ico" />
     <style>
-        * {
-            font-family: Arial;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #242731;
-            color: rgb(178, 177, 176);
-            overflow: hidden;
-            font-size: 18px;
-            text-align: center;
-        }
-        .h1 {
-            font-size: 30px;
-            text-align: center;
-            margin-block-start: auto;
-        }
-        .about-section {
-            width: 100%;
-            background: #2C2F39;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .detail-section {
-            width: 100%;
-            background: #2C2F39;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .about-container {
-            display: flex;
-        }
-        .description-block {
-            color: rgb(178, 177, 176);
-            margin: 20px;
-            padding: 55px;
-            font-size: 20px;
-            text-align: start;
-            text-transform: none;
-            margin-bottom: 10px;
-        }
-        img {
-            margin-top: 130px;
-            margin-left: 10px;
-            height: fit-content;
-            padding-right: 30px;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-        .table-block {
-            margin: 20px;
-            padding: 60px;
-            font-size: 20px;
-            text-align: start;
-            text-transform: none;
-            margin-bottom: 10px;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100vh;
-            height: 80vh;
-        }
-        th, td {
-            color: rgb(178, 177, 176);
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #242731;
-            text-align: center;
-        }
-        td:first-child {
-            text-align: center;
-        }
-        footer {
-            background-color: #242731;
-            color: rgb(178, 177, 176);
-            padding: 1px; 
-            font-size: 18px;
-            text-align: center;
-        }
+      * {
+        font-family: Arial;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #242731;
+        color: rgb(178, 177, 176);
+        overflow: hidden;
+        font-size: 18px;
+        text-align: center;
+      }
+      .h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-block-start: auto;
+      }
+      .about-section {
+        width: 100%;
+        background: #2c2f39;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .detail-section {
+        width: 100%;
+        background: #2c2f39;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-container {
+        display: flex;
+      }
+      .description-block {
+        color: rgb(178, 177, 176);
+        margin: 20px;
+        padding: 55px;
+        font-size: 20px;
+        text-align: start;
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      img {
+        margin-top: 130px;
+        margin-left: 10px;
+        height: fit-content;
+        padding-right: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+      .table-block {
+        margin: 20px;
+        padding: 60px 1px 60px 60px;
+        font-size: 20px;
+        text-align: start;
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100vh;
+        height: 80vh;
+      }
+      th,
+      td {
+        color: rgb(178, 177, 176);
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #242731;
+        text-align: center;
+      }
+      td:first-child {
+        text-align: center;
+      }
+      footer {
+        background-color: #242731;
+        color: rgb(178, 177, 176);
+        padding: 1px;
+        font-size: 18px;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>Global Information Tracker (GIT)</h1>
+    </header>
+    <section class="about-section">
+      <div class="about-container">
+        <div class="description-block">
+          <h2>What is Git?</h2>
+          <p>
+            Git is a distributed version control system used by developers to
+            manage and track changes to their codebase. Developed by Linus
+            Torvalds in 2005, Git has become one of the most widely adopted
+            version control systems in the software development industry.
+            <br /><br />
+            At its core, Git allows developers to create snapshots, or
+            "commits," of their code at different points in time. These commits
+            capture changes made to the codebase, along with metadata such as
+            the author's name, email, and a timestamp. This enables developers
+            to track the history of their project and revert to previous states
+            if needed.
+            <br /><br />
+            One of Git's key features is its distributed nature, which means
+            that every developer has a complete copy of the project's entire
+            history on their local machine. This decentralization allows for
+            greater flexibility and collaboration, as developers can work on
+            separate branches of the codebase independently and merge their
+            changes later.
+            <br /><br />
+            Git also provides powerful branching and merging capabilities,
+            allowing developers to create separate branches of the codebase to
+            work on new features or bug fixes without affecting the main
+            codebase. Once the changes are complete, these branches can be
+            merged back into the main branch seamlessly.
+            <br /><br />
+            Additionally, Git offers robust support for collaboration and code
+            sharing. Developers can host their Git repositories on platforms
+            like GitHub, GitLab, or Bitbucket, making it easy to share code with
+            colleagues and collaborate on projects with contributors from around
+            the world.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/assests/img/git.jpg"
+            alt="About Git"
+            width="800"
+            height="800"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="detail-section">
+      <div class="about-container">
+        <div class="table-block">
+          <table>
+            <tr>
+              <th colspan="2">Basic Git Commands</th>
+            </tr>
+            <tr>
+              <th>Git Command</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>git init</td>
+              <td>
+                Initializes a new Git repository in the current directory.
+              </td>
+            </tr>
+            <tr>
+              <td>git clone</td>
+              <td>Copies an existing Git repository from a remote source.</td>
+            </tr>
+            <tr>
+              <td>git add</td>
+              <td>
+                Adds changes in the working directory to the staging area.
+              </td>
+            </tr>
+            <tr>
+              <td>git commit</td>
+              <td>Records changes in the staging area to the repository.</td>
+            </tr>
+            <tr>
+              <td>git status</td>
+              <td>
+                Displays the status of the working directory and staging area.
+              </td>
+            </tr>
+            <tr>
+              <td>git branch</td>
+              <td>Lists, creates, or deletes branches in the repository.</td>
+            </tr>
+            <tr>
+              <td>git checkout</td>
+              <td>
+                Switches branches or restores files in the working directory.
+              </td>
+            </tr>
+            <tr>
+              <td>git merge</td>
+              <td>
+                Combines changes from different branches into the current
+                branch.
+              </td>
+            </tr>
+            <tr>
+              <td>git pull</td>
+              <td>Fetches changes from a remote repository and merges them.</td>
+            </tr>
+            <tr>
+              <td>git push</td>
+              <td>Pushes local changes to a remote repository.</td>
+            </tr>
+            <tr>
+              <td>git log</td>
+              <td>Displays a history of commits in the repository.</td>
+            </tr>
+            <tr>
+              <td>git remote</td>
+              <td>Manages connections to remote repositories.</td>
+            </tr>
+          </table>
+        </div>
+        <div class="description-block">
+          <h2>Git Basics: What You Need to Know</h2>
+          <p>Here are some key concepts you need to know about Git:</p>
+          <ul>
+            <li>
+              <strong>Repositories:</strong> A repository, or repo for short, is
+              like a folder that contains all the files and history of your
+              project. It's where Git stores all the snapshots of your code.
+            </li>
+            <br />
+            <li>
+              <strong>Commits:</strong> A commit is a snapshot of your code at a
+              specific point in time. Each commit has a unique identifier and
+              includes changes made to the files in your project.
+            </li>
+            <br />
+            <li>
+              <strong>Branches:</strong> Branches allow you to work on different
+              versions of your code simultaneously. You can create a new branch
+              to work on a new feature or bug fix without affecting the main
+              codebase.
+            </li>
+            <br />
+            <li>
+              <strong>Merge:</strong> Merging is the process of combining
+              changes from one branch into another. It's how you bring your work
+              from a feature branch back into the main branch of your project.
+            </li>
+            <br />
+            <li>
+              <strong>Pull Requests:</strong> Pull requests, or PRs, are a way
+              to propose changes to a project hosted on a platform like GitHub.
+              They allow you to review and discuss code changes with your team
+              before merging them into the main codebase.
+            </li>
+            <br />
+            <li>
+              <strong>Clone:</strong> Cloning is the process of creating a local
+              copy of a repository from a remote server. It allows you to work
+              on the code locally and synchronize your changes with the remote
+              repository.
+            </li>
+            <br />
+            <li>
+              <strong>Push and Pull:</strong> Pushing is the process of sending
+              your local commits to a remote repository, while pulling is the
+              process of fetching changes from a remote repository and merging
+              them into your local branch.
+            </li>
+            <br />
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy2024 Gayanuka Bulegoda</p>
+    </footer>
+  </body>
 </html>

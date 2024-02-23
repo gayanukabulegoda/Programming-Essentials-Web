@@ -1,505 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Essentials</title>
-    <link rel="icon" href="/assests/icon.png" />
+    <link rel="icon" href="/assests/icon/programmingEssentials.ico" />
     <style>
-        * {
-            font-family: Arial;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .header nav {
-            width: 100%;
-            background: black;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-        }
-        .header ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-        .header li {
-            float: right;
-        }
-        .header a {
-            padding: 20px;
-            width: 100px;
-            display: block;
-            text-decoration: none;
-            color: antiquewhite;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        #home {
-            height: 100vh;
-            width: 100%;
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #about {
-            height: 100vh;
-            width: 100%;
-            background: #2B2E37;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #blog {
-            height: 100vh;
-            width: 100%;
-            background: #1D212B;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #contact {
-            height: 100vh;
-            width: 100%;
-            background: #1C1F26;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        h1 {
-            margin: 100px;
-            text-align: center;
-            padding: 0;
-            color: blueviolet;
-        }
-        .grbLogo {
-            float: left;  
-            margin-top: 15px;
-            margin-left: 10px;
-            height: fit-content;
-            padding-left: 20px;   
-        }
-        .home-content {
-            text-align: center;
-        }
-        .home-content h1 {
-            font-size: 95px;
-            color: antiquewhite;
-            margin-bottom: 50px;
-        }
-        .home-content a {
-            font-size: 23px;
-            color: antiquewhite;
-            text-decoration: none;
-            border: 2px solid antiquewhite;
-            padding: 15px 25px;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-        .home-content a:hover {
-            background-color: antiquewhite;
-            color: rgb(71, 71, 71);
-        }
+      * {
+        font-family: Arial;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .header nav {
+        width: 100%;
+        background: #0c0d11;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+      }
+      .header ul {
+        padding: 0px 20px;
+        margin: 0;
+        list-style: none;
+      }
+      .header li {
+        float: right;
+      }
+      .header a {
+        padding: 20px;
+        width: 100px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: lavender;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .header a:hover {
+        background-color: #333;
+      }
+      #home {
+        height: 100vh;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #about {
+        height: 100vh;
+        width: 100%;
+        background: #2b2e37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #blog {
+        height: 100vh;
+        width: 100%;
+        background: #1d212b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #contact {
+        height: 100vh;
+        width: 100%;
+        background: #1c1f26;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        margin: 100px;
+        text-align: center;
+        color: rgb(178, 177, 176);
+        padding: 0;
+      }
+      .grbLogo {
+        float: left;
+        margin-top: 15px;
+        margin-left: 10px;
+        height: fit-content;
+        padding-left: 20px;
+      }
+      .home-content {
+        text-align: center;
+      }
+      .home-content h1 {
+        font-size: 95px;
+        color: lavender;
+        margin-bottom: 50px;
+      }
+      .home-content a {
+        font-size: 23px;
+        color: lavender;
+        text-decoration: none;
+        border: 2px solid lavender;
+        padding: 15px 25px;
+        border-radius: 50px;
+        transition: 0.3s;
+      }
+      .home-content a:hover {
+        background-color: lavender;
+        color: #1c1f26;
+      }
+      .background-clip {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+      @media (min-aspect-ratio: 16/9) {
         .background-clip {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
+          width: 100%;
+          height: auto;
         }
-        @media (min-aspect-ratio:16/9) {
-            .background-clip {
-                width: 100%;
-                height: auto;
-            }
+      }
+      @media (max-aspect-ratio: 16/9) {
+        .background-clip {
+          width: auto;
+          height: 100%;
         }
-        @media (max-aspect-ratio:16/9) {
-            .background-clip {
-                width: auto;
-                height: 100%;
-            }
-        }
-        #blog h1 {
-            font-size: 30px;
-            color: antiquewhite;
-            margin-block-start: auto;
-        }
+      }
+      #blog h1 {
+        font-size: 30px;
+        margin-block-start: auto;
+      }
+      .blog-container {
+        display: flex;
+      }
+      .blog-container a {
+        text-decoration: none;
+        color: rgb(178, 177, 176);
+      }
+      .blog-container .card h3 {
+        font-size: 20px;
+        text-align: center;
+        text-transform: none;
+      }
+      .blog-container .card {
+        background: #2a2e3a;
+        margin: 20px;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 10px;
+        border-radius: 12px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+      .blog-container .card:hover {
+        transform: scale(1.05);
+        border: 2px solid rgb(178, 177, 176);
+      }
+      @media (max-width: 900px) {
         .blog-container {
-            display: flex;
+          flex-direction: column;
         }
-        .blog-container a {
-            text-decoration: none;
-            color: black;
-        }
-        .blog-container .card h3 {
-            font-size: 20px;
-            text-align: center;
-            text-transform: none;
-        }
-        .blog-container .card {
-            background: #2696E9;
-            margin: 20px;
-            padding: 20px;
-            font-size: 20px;
-            text-align: center;
-            text-transform: none;
-            margin-bottom: 10px;
-            border-radius: 12px;
-        }
-        @media (max-width: 900px) {
-            .blog-container {
-                flex-direction: column;
-            }
-        }
-        .reveal {
-            position: relative;
-            transform: translateY(150px);
-            opacity: 0;
-            transition: all 2s ease;
-        }
-        .reveal.active {
-            transform: translateY(0px);
-            opacity: 1;
-        }
-        #about h1 {
-            font-size: 30px;
-            color: antiquewhite;
-            margin-block-start: auto;
-        }
-        .about-container {
-            display: flex;
-        }
-        .about-img {
-            margin-top: 15px;
-            margin-left: 10px;
-            height: fit-content;
-            padding-right: 30px;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-        .about-container .description-block {
-            color: rgb(178, 177, 176);
-            margin: 20px;
-            padding: 40px;
-            font-size: 20px;
-            text-align: start;
-            text-transform: none;
-            margin-bottom: 10px;
-        }
-        #contact h1 {
-            font-size: 30px;
-            color: antiquewhite;
-            margin-block-start: auto;
-        }
-        .contact-content {
-            color: rgb(178, 177, 176);
-            width:fit-content;
-            margin: 20px;
-            padding: 100px;
-            font-size: 20px;
-            text-align: center;
-            text-transform: none;
-            margin-bottom: 5px;
-        }
-        .contact-container {
-            display: flex;
-        }
-        .contact-form {
-            background: #3d444a;
-            height: 500px;
-            width: 1000px;
-            margin: 20px;
-            padding: 20px;
-            font-size: 20px;
-            text-align: left;
-            text-transform: none;
-            margin-bottom: 2px;
-            margin-right: 80px;
-            border-radius: 12px;
-        }
-        .contact-form form {
-            margin-top: 20px;
-        }
-        .contact-form label {
-            font-size: large;
-            display: block;
-            margin-bottom: 10px;
-            margin-top: 20px;
-            color: antiquewhite;
-        }
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-            font-size: large;
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 12px;
-            box-sizing: border-box;
-        }
-        .contact-form textarea {
-            height: 200px;
-        }
-        .contact-form input[type="submit"] {
-            background-color: #067eda;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-left: 500px;
-            margin-top: 5px;
-        }
-        .contact-form input[type="submit"]:hover {
-            background-color: #045ba3;
-        }
-        footer {
-            background-color: black;
-            color: antiquewhite;
-            padding: 1px; 
-            font-size: 18px;
-            text-align: center;
-        }
+      }
+      .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 2s ease;
+      }
+      .reveal.active {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      #about h1 {
+        font-size: 30px;
+        color: rgb(178, 177, 176);
+        margin-block-start: auto;
+      }
+      .about-container {
+        display: flex;
+      }
+      .about-img {
+        margin-top: 15px;
+        margin-left: 10px;
+        height: fit-content;
+        padding-right: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+      .about-container .description-block {
+        color: rgb(178, 177, 176);
+        margin: 20px;
+        padding: 20px 110px 20px;
+        font-size: 20px;
+        text-align: start;
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      #contact h1 {
+        font-size: 30px;
+        margin-block-start: auto;
+      }
+      .contact-content {
+        color: rgb(178, 177, 176);
+        width: fit-content;
+        margin: 20px;
+        padding: 100px;
+        font-size: 20px;
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 5px;
+        position: relative;
+      }
+      .contact-content::before,
+      .contact-content::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        border: 2px solid rgb(131, 131, 131);
+      }
+      .contact-content::before {
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+        border-radius: 30% 0 0 30%;
+      }
+      .contact-content::after {
+        right: 0;
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 0 30% 30% 0;
+      }
+      .contact-container {
+        display: flex;
+      }
+      .contact-form {
+        background: #3d444a;
+        height: 500px;
+        width: 1000px;
+        margin: 20px;
+        padding: 20px;
+        font-size: 20px;
+        text-align: left;
+        text-transform: none;
+        margin-bottom: 2px;
+        margin-right: 80px;
+        border-radius: 12px;
+      }
+      .contact-form form {
+        margin-top: 20px;
+      }
+      .contact-form label {
+        font-size: large;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        color: #c9c7c7;
+      }
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        font-size: large;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #aaaaaa;
+        border-radius: 12px;
+        box-sizing: border-box;
+        background-color: #aaaaaa;
+      }
+      .contact-form textarea {
+        height: 200px;
+      }
+      .contact-form input[type="submit"] {
+        background-color: #067eda;
+        color: rgb(54, 52, 52);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 500px;
+        margin-top: 5px;
+        transition: all 0.3s ease;
+      }
+      .contact-form input[type="submit"]:hover {
+        background-color: #045ba3;
+        transform: scale(1.05);
+      }
+      footer {
+        background-color: #14151b;
+        color: rgb(178, 177, 176);
+        padding: 1px;
+        font-size: 18px;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <nav>
-            <img 
-                src="/assests/grbLogo.png" 
-                alt="My LOGO"
-                class="grbLogo"
-                width="100"
-                height="50" 
-            >
-            <ul>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#home">Home</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <img
+          src="/assests/img/grbLogo.png"
+          alt="My LOGO"
+          class="grbLogo"
+          width="100"
+          height="50"
+        />
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#home">Home</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section id="home">
-        <video autoplay loop muted plays-inline class="background-clip">
-            <source src="/assests/homeBackgound.mp4" type="video/mp4">
-        </video>
-        <div class="home-content">
-            <h1>Programming Essentials</h1>
-            <a href="#blog">Explore More</a>
-        </div>
-    </section>
-
-    <section id="blog">
-        <div>
-            <h1>Blog</h1>
-            <div class="blog-container reveal">
-                <a href="/pages/html-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-                <a href="/pages/css-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-                <a href="/pages/javaScript-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-                <a href="/pages/java-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="blog-container reveal">
-                <a href="/pages/python-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-                <a href="/pages/php-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-                <a href="/pages/git-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-                <a href="/pages/nodejs-npm-page.html" target="_blank">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Debitis quaerat cum hic, incidunt veritatis facere. 
-                            Nemo dolorum magni, saepe dignissimos, maxime quaerat, 
-                            sint assumenda rem beatae officiis adipisci amet at?
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-        <script type="text/javascript">
-            window.addEventListener('scroll', reveal);
-            function reveal() {
-                var reveals = document.querySelectorAll('.reveal');
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowheight = window.innerHeight;
-                    var revealtop = reveals[i].getBoundingClientRect().top;
-                    var revealpoint = 150;
-                    if (revealtop < windowheight - revealpoint) {
-                        reveals[i].classList.add('active');
-                    }
-                    else {
-                        reveals[i].classList.remove('active');
-                    }         
-                }
-            }
-        </script>
+      <video autoplay loop muted plays-inline class="background-clip">
+        <source src="/assests/vid/homeBackgound.mp4" type="video/mp4" />
+      </video>
+      <div class="home-content">
+        <h1>Programming Essentials</h1>
+        <a href="#blog">Explore More</a>
+      </div>
     </section>
 
     <section id="about">
-        <div>
-            <h1>About</h1>
-            <div class="about-container reveal">
-                <div class="description-block">
-                    <h2>About Programming Essentials</h2>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Libero fugiat, iusto, cum facere sed animi placeat laudantium autem magni neque, 
-                        possimus tenetur necessitatibus. 
-                        Temporibus debitis repellat non nulla voluptatibus illo.
-                    </p>
-                    <br>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Libero fugiat, iusto, cum facere sed animi placeat laudantium autem magni neque, 
-                        possimus tenetur necessitatibus. 
-                        Temporibus debitis repellat non nulla voluptatibus illo.
-                    </p>
-                    <br>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Libero fugiat, iusto, cum facere sed animi placeat laudantium autem magni neque, 
-                        possimus tenetur necessitatibus. 
-                        Temporibus debitis repellat non nulla voluptatibus illo.
-                    </p>
-                </div>
-                <div>
-                    <img 
-                        src="/assests/aboutPageImg.jpg" 
-                        alt="About Programming"
-                        class="about-img"
-                        width="800"
-                        height="800" 
-                    >
-                </div>
-            </div>
+      <div>
+        <h1>Welcome to Programming Essentials!</h1>
+        <div class="about-container reveal">
+          <div class="description-block">
+            <ul>
+              <li>
+                <p>
+                  Our platform offers simple and straightforward explanations of
+                  essential programming languages and tools. Whether you're just
+                  starting out in the world of coding or you're looking for
+                  easy-to-understand references, our website provides basic yet
+                  comprehensive explanations on key topics.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We cover fundamental programming languages like HTML, CSS,
+                  JavaScript, Java, Python, PHP, along with vital tools such as
+                  Git, Node.js, and NPM. Our goal is to make learning
+                  programming accessible to everyone, regardless of their level
+                  of expertise.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Whether you're learning the basics of web development with
+                  HTML and CSS, exploring the functionality of JavaScript for
+                  adding interactivity to your websites, or delving into
+                  server-side programming with languages like Java, Python, and
+                  PHP, our platform has you covered.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Additionally, we offer insights into version control with Git,
+                  as well as the usage of Node.js and NPM for building scalable
+                  and efficient web applications. Our explanations are designed
+                  to be easy to follow, making them perfect for beginners and
+                  those looking to refresh their knowledge.
+                </p>
+              </li>
+              <p>
+                <i
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join us as we
+                  explore the foundational elements of coding and essential
+                  tools that every developer should know. Let's embark on this
+                  learning journey together!</i
+                >
+              </p>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="/assests/img/aboutPageImg.jpg"
+              alt="About Programming"
+              class="about-img"
+              width="800"
+              height="800"
+            />
+          </div>
         </div>
+      </div>
     </section>
-    <section id="contact">
-        <div>
-            <h1>Contact Us</h1>
-            <div class="contact-container reveal">
-                <div class="contact-content">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptatibus veritatis aliquid voluptates aspernatur provident 
-                        vel inventore corporis eum autem commodi, sed delectus blanditiis 
-                        iusto exercitationem assumenda natus alias dolorem minima.
-                    </p>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptatibus veritatis aliquid voluptates aspernatur provident 
-                        vel inventore corporis eum autem commodi, sed delectus blanditiis 
-                        iusto exercitationem assumenda natus alias dolorem minima.
-                    </p>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptatibus veritatis aliquid voluptates aspernatur provident 
-                        vel inventore corporis eum autem commodi, sed delectus blanditiis 
-                        iusto exercitationem assumenda natus alias dolorem minima.
-                    </p>
-                </div>
-                <div class="contact-form">
-                    <form action="/submit-form" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" />
-                
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" />
-                
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" cols="50"></textarea>
-                
-                        <input type="submit" value="Submit" />
-                    </form>
-                </div>
+
+    <section id="blog">
+      <div>
+        <h1>Blog</h1>
+        <div class="blog-container reveal">
+          <a href="/pages/html-page.html" target="_blank">
+            <div class="card">
+              <h3>HTML</h3>
+              <p>
+                HTML, or HyperText Markup Language, is a special set of codes
+                used to create web pages that you see on the Internet. These
+                codes give instructions to web browsers on how to display text
+                and pictures on a webpage....
+              </p>
             </div>
+          </a>
+          <a href="/pages/css-page.html" target="_blank">
+            <div class="card">
+              <h3>CSS</h3>
+              <p>
+                CSS, or Cascading Style Sheets, is another essential component
+                of web development that works closely with HTML. While HTML
+                defines the structure and content of a webpage, CSS controls how
+                that content presented....
+              </p>
+            </div>
+          </a>
+          <a href="/pages/javaScript-page.html" target="_blank">
+            <div class="card">
+              <h3>JavaScript</h3>
+              <p>
+                JavaScript is a programming language commonly used in web
+                development to add interactivity and dynamic behavior to
+                websites. It allows developers to create interactive elements,
+                handle user input, manipulate content, and....
+              </p>
+            </div>
+          </a>
+          <a href="/pages/java-page.html" target="_blank">
+            <div class="card">
+              <h3>Java</h3>
+              <p>
+                Java is a high-level, object-oriented programming language
+                developed by Sun Microsystems (now owned by Oracle Corporation).
+                It is designed to be platform-independent, meaning that Java
+                programs can run on any device....
+              </p>
+            </div>
+          </a>
         </div>
+        <br />
+        <div class="blog-container reveal">
+          <a href="/pages/python-page.html" target="_blank">
+            <div class="card">
+              <h3>Python</h3>
+              <p>
+                Python is a high-level programming language known for its
+                simplicity and readability. It was created by Guido van Rossum
+                and first released in 1991. Python is designed to be easy to
+                learn and use, making it a....
+              </p>
+            </div>
+          </a>
+          <a href="/pages/php-page.html" target="_blank">
+            <div class="card">
+              <h3>PHP</h3>
+              <p>
+                PHP, which stands for Hypertext Preprocessor, is a widely-used
+                server-side scripting language primarily designed for web
+                development. Originally created by Danish-Canadian programmer
+                Rasmus Lerdorf in 1994, ....
+              </p>
+            </div>
+          </a>
+          <a href="/pages/git-page.html" target="_blank">
+            <div class="card">
+              <h3>Git</h3>
+              <p>
+                Git is a distributed version control system used by developers
+                to manage and track changes to their codebase. Developed by
+                Linus Torvalds in 2005, Git has become one of the most widely
+                adopted version control systems....
+              </p>
+            </div>
+          </a>
+          <a href="/pages/nodejs-npm-page.html" target="_blank">
+            <div class="card">
+              <h3>Node.js &amp; npm</h3>
+              <p>
+                Node.js is a runtime environment for executing JavaScript code
+                outside of a web browser. Traditionally, JavaScript was
+                primarily used for creating interactive features within web
+                browsers. However, Node.js extends the....
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        window.addEventListener("scroll", reveal);
+        function reveal() {
+          var reveals = document.querySelectorAll(".reveal");
+          for (var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+            if (revealtop < windowheight - revealpoint) {
+              reveals[i].classList.add("active");
+            } else {
+              reveals[i].classList.remove("active");
+            }
+          }
+        }
+      </script>
+    </section>
+
+    <section id="contact">
+      <div>
+        <h1>Contact Us</h1>
+        <div class="contact-container reveal">
+          <div class="contact-content">
+            <p>
+              We appreciate your interest in collaborating with us to improve
+              our website. Whether you're a developer with technical expertise,
+              a content creator with valuable insights, or simply someone
+              passionate about enhancing user experiences, we welcome your
+              contributions.
+            </p>
+            <br />
+            <p>
+              Your ideas and suggestions play a crucial role in shaping the
+              future of our platform. Don't hesitate to reach out to us via the
+              contact form below to discuss potential collaboration
+              opportunities or share your innovative ideas. We're excited to
+              explore new possibilities together and make our website even
+              better!
+            </p>
+            <br />
+            <p>
+              Simply send us a message by filling out the form below. We value
+              your input and look forward to hearing from you!
+            </p>
+          </div>
+          <div class="contact-form">
+            <form action="/submit-form" method="POST">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+              ></textarea>
+
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <p>&copy2024 Gayanuka Bulegoda</p>
+      <p>&copy2024 Gayanuka Bulegoda</p>
     </footer>
-</body>
+  </body>
 </html>
