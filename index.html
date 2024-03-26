@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Programming Essentials</title>
     <link rel="icon" href="/assests/icon/programmingEssentials.ico" />
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <nav>
+      <div class="logo">
         <img
           src="/assests/img/grbLogo.png"
           alt="My LOGO"
@@ -17,11 +24,16 @@
           width="100"
           height="50"
         />
+      </div>
+      <nav>
         <ul>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="menu-icon">
+            <i class="fa-solid fa-bars" style="color: lavender"></i>
+          </li>
         </ul>
       </nav>
     </header>
@@ -37,166 +49,160 @@
     </section>
 
     <section id="about">
-      <div>
+      <div class="about-heading">
         <h1>Welcome to Programming Essentials!</h1>
-        <div class="about-container reveal">
-          <div class="description-block">
-            <ul>
-              <li>
-                <p>
-                  Our platform offers simple and straightforward explanations of
-                  essential programming languages and tools. Whether you're just
-                  starting out in the world of coding or you're looking for
-                  easy-to-understand references, our website provides basic yet
-                  comprehensive explanations on key topics.
-                </p>
-              </li>
-              <li>
-                <p>
-                  We cover fundamental programming languages like HTML, CSS,
-                  JavaScript, Java, Python, PHP, along with vital tools such as
-                  Git, Node.js, and NPM. Our goal is to make learning
-                  programming accessible to everyone, regardless of their level
-                  of expertise.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Whether you're learning the basics of web development with
-                  HTML and CSS, exploring the functionality of JavaScript for
-                  adding interactivity to your websites, or delving into
-                  server-side programming with languages like Java, Python, and
-                  PHP, our platform has you covered.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Additionally, we offer insights into version control with Git,
-                  as well as the usage of Node.js and NPM for building scalable
-                  and efficient web applications. Our explanations are designed
-                  to be easy to follow, making them perfect for beginners and
-                  those looking to refresh their knowledge.
-                </p>
-              </li>
+      </div>
+      <div class="about-container reveal">
+        <div class="description-block">
+          <ul>
+            <li>
               <p>
-                <i
-                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join us as we
-                  explore the foundational elements of coding and essential
-                  tools that every developer should know. Let's embark on this
-                  learning journey together!</i
-                >
+                Our platform offers simple and straightforward explanations of
+                essential programming languages and tools. Whether you're just
+                starting out in the world of coding or you're looking for
+                easy-to-understand references, our website provides basic yet
+                comprehensive explanations on key topics.
               </p>
-            </ul>
-          </div>
-          <div>
-            <img
-              src="/assests/img/aboutPageImg.jpg"
-              alt="About Programming"
-              class="about-img"
-              width="800"
-              height="800"
-            />
-          </div>
+            </li>
+            <li>
+              <p>
+                We cover fundamental programming languages like HTML, CSS,
+                JavaScript, Java, Python, PHP, along with vital tools such as
+                Git, Node.js, and NPM. Our goal is to make learning programming
+                accessible to everyone, regardless of their level of expertise.
+              </p>
+            </li>
+            <li>
+              <p>
+                Whether you're learning the basics of web development with HTML
+                and CSS, exploring the functionality of JavaScript for adding
+                interactivity to your websites, or delving into server-side
+                programming with languages like Java, Python, and PHP, our
+                platform has you covered.
+              </p>
+            </li>
+            <li>
+              <p>
+                Additionally, we offer insights into version control with Git,
+                as well as the usage of Node.js and NPM for building scalable
+                and efficient web applications. Our explanations are designed to
+                be easy to follow, making them perfect for beginners and those
+                looking to refresh their knowledge.
+              </p>
+            </li>
+            <p>
+              <i
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join us as we
+                explore the foundational elements of coding and essential tools
+                that every developer should know. Let's embark on this learning
+                journey together!</i
+              >
+            </p>
+          </ul>
+        </div>
+        <div class="about-image-block">
+          <img
+            src="/assests/img/aboutPageImg.jpg"
+            alt="About Programming"
+            class="about-img"
+          />
         </div>
       </div>
     </section>
 
     <section id="blog">
-      <div>
+      <div class="blog-heading">
         <h1>Blog</h1>
-        <div class="blog-container reveal">
-          <a href="/pages/html-page.html" target="_blank">
-            <div class="card">
-              <h3>HTML</h3>
-              <p>
-                HTML, or HyperText Markup Language, is a special set of codes
-                used to create web pages that you see on the Internet. These
-                codes give instructions to web browsers on how to display text
-                and pictures on a webpage....
-              </p>
-            </div>
-          </a>
-          <a href="/pages/css-page.html" target="_blank">
-            <div class="card">
-              <h3>CSS</h3>
-              <p>
-                CSS, or Cascading Style Sheets, is another essential component
-                of web development that works closely with HTML. While HTML
-                defines the structure and content of a webpage, CSS controls how
-                that content presented....
-              </p>
-            </div>
-          </a>
-          <a href="/pages/javaScript-page.html" target="_blank">
-            <div class="card">
-              <h3>JavaScript</h3>
-              <p>
-                JavaScript is a programming language commonly used in web
-                development to add interactivity and dynamic behavior to
-                websites. It allows developers to create interactive elements,
-                handle user input, manipulate content, and....
-              </p>
-            </div>
-          </a>
-          <a href="/pages/java-page.html" target="_blank">
-            <div class="card">
-              <h3>Java</h3>
-              <p>
-                Java is a high-level, object-oriented programming language
-                developed by Sun Microsystems (now owned by Oracle Corporation).
-                It is designed to be platform-independent, meaning that Java
-                programs can run on any device....
-              </p>
-            </div>
-          </a>
-        </div>
-        <br />
-        <div class="blog-container reveal">
-          <a href="/pages/python-page.html" target="_blank">
-            <div class="card">
-              <h3>Python</h3>
-              <p>
-                Python is a high-level programming language known for its
-                simplicity and readability. It was created by Guido van Rossum
-                and first released in 1991. Python is designed to be easy to
-                learn and use, making it a....
-              </p>
-            </div>
-          </a>
-          <a href="/pages/php-page.html" target="_blank">
-            <div class="card">
-              <h3>PHP</h3>
-              <p>
-                PHP, which stands for Hypertext Preprocessor, is a widely-used
-                server-side scripting language primarily designed for web
-                development. Originally created by Danish-Canadian programmer
-                Rasmus Lerdorf in 1994, ....
-              </p>
-            </div>
-          </a>
-          <a href="/pages/git-page.html" target="_blank">
-            <div class="card">
-              <h3>Git</h3>
-              <p>
-                Git is a distributed version control system used by developers
-                to manage and track changes to their codebase. Developed by
-                Linus Torvalds in 2005, Git has become one of the most widely
-                adopted version control systems....
-              </p>
-            </div>
-          </a>
-          <a href="/pages/nodejs-npm-page.html" target="_blank">
-            <div class="card">
-              <h3>Node.js &amp; npm</h3>
-              <p>
-                Node.js is a runtime environment for executing JavaScript code
-                outside of a web browser. Traditionally, JavaScript was
-                primarily used for creating interactive features within web
-                browsers. However, Node.js extends the....
-              </p>
-            </div>
-          </a>
-        </div>
+      </div>
+      <div class="blog-container reveal">
+        <a href="/pages/html-page.html" target="_blank">
+          <div class="card">
+            <h3>HTML</h3>
+            <p>
+              HTML, or HyperText Markup Language, is a special set of codes used
+              to create web pages that you see on the Internet. These codes give
+              instructions to web browsers on how to display text and pictures
+              on a webpage....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/css-page.html" target="_blank">
+          <div class="card">
+            <h3>CSS</h3>
+            <p>
+              CSS, or Cascading Style Sheets, is another essential component of
+              web development that works closely with HTML. While HTML defines
+              the structure and content of a webpage, CSS controls how that
+              content presented....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/javaScript-page.html" target="_blank">
+          <div class="card">
+            <h3>JavaScript</h3>
+            <p>
+              JavaScript is a programming language commonly used in web
+              development to add interactivity and dynamic behavior to websites.
+              It allows developers to create interactive elements, handle user
+              input, manipulate content, and....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/java-page.html" target="_blank">
+          <div class="card">
+            <h3>Java</h3>
+            <p>
+              Java is a high-level, object-oriented programming language
+              developed by Sun Microsystems (now owned by Oracle Corporation).
+              It is designed to be platform-independent, meaning that Java
+              programs can run on any device....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/python-page.html" target="_blank">
+          <div class="card">
+            <h3>Python</h3>
+            <p>
+              Python is a high-level programming language known for its
+              simplicity and readability. It was created by Guido van Rossum and
+              first released in 1991. Python is designed to be easy to learn and
+              use, making it a....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/php-page.html" target="_blank">
+          <div class="card">
+            <h3>PHP</h3>
+            <p>
+              PHP, which stands for Hypertext Preprocessor, is a widely-used
+              server-side scripting language primarily designed for web
+              development. Originally created by Danish-Canadian programmer
+              Rasmus Lerdorf in 1994, ....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/git-page.html" target="_blank">
+          <div class="card">
+            <h3>Git</h3>
+            <p>
+              Git is a distributed version control system used by developers to
+              manage and track changes to their codebase. Developed by Linus
+              Torvalds in 2005, Git has become one of the most widely adopted
+              version control systems....
+            </p>
+          </div>
+        </a>
+        <a href="/pages/nodejs-npm-page.html" target="_blank">
+          <div class="card">
+            <h3>Node.js &amp; npm</h3>
+            <p>
+              Node.js is a runtime environment for executing JavaScript code
+              outside of a web browser. Traditionally, JavaScript was primarily
+              used for creating interactive features within web browsers.
+              However, Node.js extends the....
+            </p>
+          </div>
+        </a>
       </div>
 
       <script type="text/javascript">
@@ -218,51 +224,56 @@
     </section>
 
     <section id="contact">
-      <div>
+      <div class="contact-heading">
         <h1>Contact Us</h1>
-        <div class="contact-container reveal">
-          <div class="contact-content">
-            <p>
-              We appreciate your interest in collaborating with us to improve
-              our website. Whether you're a developer with technical expertise,
-              a content creator with valuable insights, or simply someone
-              passionate about enhancing user experiences, we welcome your
-              contributions.
-            </p>
+      </div>
+      <div class="contact-container reveal">
+        <div class="contact-content">
+          <p>
+            We appreciate your interest in collaborating with us to improve our
+            website. Whether you're a developer with technical expertise, a
+            content creator with valuable insights, or simply someone passionate
+            about enhancing user experiences, we welcome your contributions.
+          </p>
+          <br />
+          <p>
+            Your ideas and suggestions play a crucial role in shaping the future
+            of our platform. Don't hesitate to reach out to us via the contact
+            form below to discuss potential collaboration opportunities or share
+            your innovative ideas. We're excited to explore new possibilities
+            together and make our website even better!
+          </p>
+          <br />
+          <p>
+            Simply send us a message by filling out the form below. We value
+            your input and look forward to hearing from you!
+          </p>
+          <br />
+          <p>
             <br />
-            <p>
-              Your ideas and suggestions play a crucial role in shaping the
-              future of our platform. Don't hesitate to reach out to us via the
-              contact form below to discuss potential collaboration
-              opportunities or share your innovative ideas. We're excited to
-              explore new possibilities together and make our website even
-              better!
-            </p>
-            <br />
-            <p>
-              Simply send us a message by filling out the form below. We value
-              your input and look forward to hearing from you!
-            </p>
-          </div>
-          <div class="contact-form">
-            <form action="/submit-form" method="POST">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" />
+            <i
+              style="
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                  'Helvetica Neue', sans-serif;
+              "
+              >✤&nbsp;&nbsp;Programming Essentials Web Team&nbsp;&nbsp;✤</i
+            >
+          </p>
+        </div>
+        <div class="contact-form">
+          <form action="/submit-form" target="_blank" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
 
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
 
-              <label for="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                cols="50"
-              ></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
 
-              <input type="submit" value="Submit" />
-            </form>
-          </div>
+            <input type="submit" value="Submit" />
+          </form>
         </div>
       </div>
     </section>
