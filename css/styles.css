@@ -13,12 +13,11 @@ body {
 }
 
 .header {
-  width: 100vw;
+  width: 99.8vw;
   background-color: #0c0d11;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed; */
 }
 
 .header nav {
@@ -68,7 +67,7 @@ body {
 
 section {
   height: 100vh;
-  width: 100%;
+  width: 99.99vw;
 }
 
 #home {
@@ -114,7 +113,7 @@ h1 {
 
 @media (min-aspect-ratio: 16/9) {
   .background-clip {
-    width: 100%;
+    width: 99.99%;
     height: auto;
   }
 }
@@ -133,7 +132,7 @@ h1 {
 }
 
 .about-heading {
-  width: 100vw;
+  width: 99.8vw;
   height: 12vh;
   display: flex;
   justify-content: center;
@@ -146,7 +145,7 @@ h1 {
 }
 
 .about-container {
-  width: 100vw;
+  width: 99.8vw;
   height: 88vh;
   display: flex;
 }
@@ -195,7 +194,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
 }
 
 .blog-heading h1 {
@@ -206,7 +204,6 @@ h1 {
 .blog-container {
   width: 99.8vw;
   height: 88vh;
-  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
@@ -239,12 +236,6 @@ h1 {
   border: 2px solid rgb(178, 177, 176);
 }
 
-/* @media (max-width: 900px) {
-  .blog-container {
-    flex-direction: column;
-  }
-} */
-
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -269,7 +260,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid green;
 }
 
 .contact-heading h1 {
@@ -280,7 +270,6 @@ h1 {
 .contact-container {
   width: 99.8vw;
   height: 88vh;
-  border: 2px solid green;
   display: flex;
 }
 
@@ -293,7 +282,6 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  border: 2px solid blue;
   color: rgb(178, 177, 176);
   text-align: center;
   position: relative;
@@ -333,7 +321,6 @@ h1 {
 .contact-form {
   width: 39.9vw;
   height: 88vh;
-  border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,8 +384,20 @@ h1 {
   transform: scale(1.05);
 }
 
-/* 0 - 575 */
+footer {
+  background-color: #14151b;
+  color: rgb(178, 177, 176);
+  padding: 1px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* 0 - 575 (380 - 575)*/
 @media screen and (max-width: 575px) {
+  .header {
+    width: 99.9vw;
+  }
+
   .header nav li a {
     display: none;
   }
@@ -415,6 +414,10 @@ h1 {
     background-color: #333;
   }
 
+  #home {
+    width: 99vw;
+  }
+
   .home-content h1 {
     font-size: 330%;
   }
@@ -423,8 +426,18 @@ h1 {
     font-size: 94%;
   }
 
+  .about-heading {
+    width: 99vw;
+    height: 6vh;
+  }
+
   .about-heading h1 {
     font-size: 120%;
+  }
+
+  .about-container {
+    width: 99vw;
+    height: 93vh;
   }
 
   .about-container .description-block {
@@ -437,7 +450,7 @@ h1 {
   }
 
   .about-container .description-block ul {
-    font-size: 95%;
+    font-size: 97%;
   }
 
   .blog-heading {
@@ -471,6 +484,79 @@ h1 {
     margin: 0;
     overflow: hidden;
   }
+
+  .contact-heading {
+    width: 99vw;
+    height: 4vh;
+  }
+
+  .contact-container {
+    width: 99vw;
+    height: 96vh;
+    flex-direction: column;
+  }
+
+  .contact-content {
+    width: 98.5vw;
+    height: 60vh;
+  }
+
+  .contact-content::before,
+  .contact-content::after {
+    width: 50%;
+    height: 95%;
+    top: 3%;
+  }
+
+  .contact-content::before {
+    left: 5.5%;
+    border-radius: 10% 0 0 10%;
+  }
+
+  .contact-content::after {
+    right: 5.5%;
+    border-radius: 0 10% 10% 0;
+  }
+
+  .contact-form {
+    width: 98.5vw;
+    height: 35vh;
+  }
+
+  .contact-heading h1 {
+    font-size: 120%;
+  }
+
+  .contact-content p {
+    font-size: 90%;
+  }
+
+  .contact-form form {
+    margin: 7%;
+    padding: 3% 5%;
+  }
+
+  .contact-form form label {
+    font-size: 80%;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 75%;
+  }
+
+  .contact-form form input[type="text"],
+  .contact-form form input[type="email"],
+  .contact-form form textarea {
+    font-size: 82%;
+  }
+
+  .contact-form form textarea {
+    height: 60px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
 }
 
 /* 440 - 576 */
@@ -482,6 +568,10 @@ h1 {
 
 /* 576 - 767 */
 @media screen and (min-width: 576px) and (max-width: 767px) {
+  .header {
+    width: 99.4vw;
+  }
+
   .header nav li a {
     display: none;
   }
@@ -498,6 +588,10 @@ h1 {
     background-color: #333;
   }
 
+  #home {
+    width: 99.3vw;
+  }
+
   .home-content h1 {
     font-size: 420%;
   }
@@ -506,8 +600,16 @@ h1 {
     font-size: 94%;
   }
 
+  .about-heading {
+    width: 99.3vw;
+  }
+
   .about-heading h1 {
     font-size: 130%;
+  }
+
+  .about-container {
+    width: 99.3vw;
   }
 
   .about-container .description-block {
@@ -520,16 +622,16 @@ h1 {
   }
 
   .about-container .description-block ul {
-    font-size: 108%;
+    font-size: 111.5%;
   }
 
   .blog-heading {
-    width: 99.8vw;
+    width: 99.3vw;
     height: 4vh;
   }
 
   .blog-container {
-    width: 99.8vw;
+    width: 99.3vw;
     height: 96vh;
     padding: 1% 0;
     grid-template-columns: repeat(2, 1fr);
@@ -548,10 +650,87 @@ h1 {
     margin: 8px 11px;
     padding: 4px 14px;
   }
+
+  .contact-heading {
+    width: 99.3vw;
+    height: 4vh;
+  }
+
+  .contact-container {
+    width: 99.3vw;
+    height: 96vh;
+    flex-direction: column;
+  }
+
+  .contact-content {
+    width: 99.2vw;
+    height: 50vh;
+  }
+
+  .contact-content::before,
+  .contact-content::after {
+    width: 50%;
+    height: 90%;
+    top: 5%;
+  }
+
+  .contact-content::before {
+    left: 5.5%;
+    border-radius: 10% 0 0 10%;
+  }
+
+  .contact-content::after {
+    right: 5.5%;
+    border-radius: 0 10% 10% 0;
+  }
+
+  .contact-form {
+    width: 99.2vw;
+    height: 45vh;
+  }
+
+  .contact-heading h1 {
+    font-size: 130%;
+  }
+
+  .contact-content p {
+    font-size: 90%;
+  }
+
+  .contact-form form {
+    margin: 7%;
+    padding: 3% 5%;
+  }
+
+  .contact-form form label {
+    font-size: 87%;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 75%;
+  }
+
+  .contact-form form input[type="text"],
+  .contact-form form input[type="email"],
+  .contact-form form textarea {
+    font-size: 88%;
+  }
+
+  .contact-form form textarea {
+    height: 100px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }
 
 /* 768 - 991 */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .header {
+    width: 99.94vw;
+  }
+
   .header nav li a {
     display: none;
   }
@@ -568,6 +747,10 @@ h1 {
     background-color: #333;
   }
 
+  #home {
+    width: 99.5vw;
+  }
+
   .home-content h1 {
     font-size: 440%;
   }
@@ -576,16 +759,33 @@ h1 {
     font-size: 104%;
   }
 
+  .about-heading {
+    width: 99.5vw;
+  }
+
   .about-heading h1 {
     font-size: 165%;
+  }
+
+  .about-container {
+    width: 99.5vw;
   }
 
   .about-container .description-block ul {
     font-size: 95%;
   }
 
+  .blog-heading {
+    width: 99.5vw;
+  }
+
   .blog-heading h1 {
     font-size: 165%;
+  }
+
+  .blog-container {
+    width: 99.5vw;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .blog-container .card h3 {
@@ -598,13 +798,52 @@ h1 {
     padding: 6px 14px;
   }
 
-  .blog-container {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-heading {
+    width: 99.5vw;
+    padding-top: 1.5%;
+  }
+
+  .contact-heading h1 {
+    font-size: 165%;
+  }
+
+  .contact-container {
+    width: 99.5vw;
+  }
+
+  .contact-content p {
+    font-size: 100%;
+  }
+
+  .contact-form form {
+    margin: 7%;
+  }
+
+  .contact-form form label {
+    font-size: 87%;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 75%;
+  }
+
+  .contact-form form input[type="text"],
+  .contact-form form input[type="email"],
+  .contact-form form textarea {
+    font-size: 88%;
+  }
+
+  footer {
+    font-size: 15px;
   }
 }
 
 /* 992 - 1199 */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  .header {
+    width: 99.95vw;
+  }
+
   .header nav li a {
     display: none;
   }
@@ -621,6 +860,10 @@ h1 {
     background-color: #333;
   }
 
+  #home {
+    width: 99.6vw;
+  }
+
   .home-content h1 {
     font-size: 480%;
   }
@@ -629,20 +872,33 @@ h1 {
     font-size: 114%;
   }
 
+  .about-heading {
+    width: 99.6vw;
+  }
+
   .about-heading h1 {
     font-size: 170%;
+  }
+
+  .about-container {
+    width: 99.6vw;
   }
 
   .about-container .description-block ul {
     font-size: 108%;
   }
 
-  .blog-container {
-    padding: 2% 0;
+  .blog-heading {
+    width: 99.6vw;
   }
 
   .blog-heading h1 {
     font-size: 170%;
+  }
+
+  .blog-container {
+    width: 99.6vw;
+    padding: 2% 0;
   }
 
   .blog-container .card h3 {
@@ -652,12 +908,58 @@ h1 {
   .blog-container .card {
     font-size: 16px;
   }
+
+  .contact-heading {
+    width: 99.6vw;
+  }
+
+  .contact-heading h1 {
+    font-size: 170%;
+  }
+
+  .contact-container {
+    width: 99.6vw;
+  }
+
+  .contact-content p {
+    font-size: 112%;
+  }
+
+  .contact-form form {
+    margin: 6%;
+  }
+
+  .contact-form form label {
+    font-size: 90%;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 85%;
+  }
+
+  .contact-form form input[type="text"],
+  .contact-form form input[type="email"],
+  .contact-form form textarea {
+    font-size: 92%;
+  }
+
+  footer {
+    font-size: 15px;
+  }
 }
 
 /* 1200 - 1399 */
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .header {
+    width: 99.96vw;
+  }
+
   .header nav {
     margin: 0% 8% 0% 0%;
+  }
+
+  #home {
+    width: 99.7vw;
   }
 
   .home-content h1 {
@@ -668,16 +970,32 @@ h1 {
     font-size: 124%;
   }
 
+  .about-heading {
+    width: 99.7vw;
+  }
+
   .about-heading h1 {
     font-size: 175%;
+  }
+
+  .about-container {
+    width: 99.7vw;
   }
 
   .about-container .description-block ul {
     font-size: 110%;
   }
 
+  .blog-heading {
+    width: 99.7vw;
+  }
+
   .blog-heading h1 {
     font-size: 175%;
+  }
+
+  .blog-container {
+    width: 99.7vw;
   }
 
   .blog-container .card h3 {
@@ -688,8 +1006,16 @@ h1 {
     font-size: 18px;
   }
 
+  .contact-heading {
+    width: 99.7vw;
+  }
+
   .contact-heading h1 {
     font-size: 175%;
+  }
+
+  .contact-container {
+    width: 99.7vw;
   }
 
   .contact-content p {
@@ -713,10 +1039,18 @@ h1 {
   .contact-form form textarea {
     font-size: 110%;
   }
+
+  footer {
+    font-size: 16px;
+  }
 }
 
 /* 1400 - 1700 */
 @media screen and (min-width: 1400px) and (max-width: 1700px) {
+  .header {
+    width: 99.97vw;
+  }
+
   .header nav {
     margin: 0% 5% 0% 0%;
   }
@@ -746,10 +1080,3 @@ h1 {
   }
 }
 
-footer {
-  background-color: #14151b;
-  color: rgb(178, 177, 176);
-  padding: 1px;
-  font-size: 18px;
-  text-align: center;
-}
