@@ -1,13 +1,17 @@
 * {
   font-family: Arial;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
+
 header {
   background-color: #21242d;
   color: rgb(178, 177, 176);
@@ -15,57 +19,285 @@ header {
   font-size: 18px;
   text-align: center;
 }
+
+section {
+  width: 100vw;
+  height: 90vh;
+}
+
 .h1 {
   font-size: 30px;
   text-align: center;
   margin-block-start: auto;
 }
+
 .about-section {
-  width: 100%;
   background: #292c35;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .npm-section {
-  width: 100%;
   background: #292c35;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about-container {
+
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
 }
+
 .description-block {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0% 2.5% 0 2.8%;
+
   color: rgb(178, 177, 176);
-  margin: 20px;
-  padding: 55px;
   font-size: 20px;
-  text-align: start;
-  text-transform: none;
-  margin-bottom: 10px;
 }
-.about-section img {
-  margin-top: 130px;
-  margin-left: 10px;
-  height: fit-content;
-  padding-right: 30px;
+
+.image-block {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 85%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.npm-section img {
-  margin-top: 130px;
-  margin-right: 10px;
-  height: fit-content;
-  padding-left: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+
+.npm-description {
+  margin: 0 2.5% 0 0;
 }
+
 footer {
   background-color: #21242d;
   color: rgb(178, 177, 176);
-  padding: 1px;
-  font-size: 18px;
+  padding: 0.1%;
+  font-size: 100%;
   text-align: center;
+}
+
+/* 0 - 575 (380 - 575)*/
+@media screen and (max-width: 575px) {
+  header {
+    font-size: 8px;
+  }
+
+  section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .about-section {
+    height: 83vh;
+  }
+
+  .about-container {
+    flex-direction: column-reverse;
+  }
+
+  .description-block {
+    width: 98%;
+    height: 74%;
+    margin: 0 1% 0 1%;
+    font-size: 13px;
+  }
+
+  .image-block {
+    width: 100%;
+    height: 26%;
+  }
+
+  img {
+    width: 65%;
+  }
+
+  .npm-section {
+    height: 90vh;
+  }
+
+  .detail-container {
+    flex-direction: column;
+  }
+
+  footer {
+    font-size: 75%;
+  }
+}
+
+/* 420 - 575 */
+@media screen and (min-width: 420px) and (max-width: 575px) {
+  .description-block {
+    font-size: 14px;
+  }
+
+  img {
+    width: 50%;
+  }
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  header {
+    font-size: 9.2px;
+  }
+
+  section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  .about-container {
+    flex-direction: column-reverse;
+  }
+
+  .description-block {
+    width: 98%;
+    height: 65%;
+    margin: 0 1% 0 1%;
+    font-size: 15.5px;
+  }
+
+  .image-block {
+    width: 100%;
+    height: 35%;
+  }
+
+  img {
+    width: 65%;
+  }
+
+  .detail-container {
+    flex-direction: column;
+  }
+
+  .npm-description {
+    font-size: 15.2px;
+  }
+
+  footer {
+    font-size: 78%;
+  }
+}
+
+/* 680 - 767 */
+@media screen and (min-width: 680px) and (max-width: 767px) {
+  img {
+    width: 60%;
+  }
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  header {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .about-container {
+    flex-direction: column-reverse;
+  }
+
+  .description-block {
+    width: 98%;
+    height: 65%;
+    margin: 0 1% 0 1%;
+    font-size: 15.5px;
+  }
+
+  .image-block {
+    width: 100%;
+    height: 35%;
+  }
+
+  img {
+    width: 48%;
+  }
+
+  .detail-container {
+    flex-direction: column;
+  }
+
+  footer {
+    font-size: 90%;
+  }
+}
+
+/* 840 - 991 */
+@media screen and (min-width: 840px) and (max-width: 991px) {
+  img {
+    width: 40%;
+  }
+}
+
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  header {
+    font-size: 13px;
+  }
+
+  .description-block {
+    margin: 0% 1% 0 2.8%;
+    font-size: 17px;
+  }
+
+  .npm-description {
+    margin: 0 1% 0 0;
+  }
+}
+
+/* 1200 - 1399 */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  header {
+    font-size: 14px;
+  }
+
+  .description-block {
+    margin: 0% 1% 0 2.8%;
+    font-size: 18px;
+  }
+
+  .npm-description {
+    margin: 0 1% 0 0;
+  }
+}
+
+/* 1400 - 1700 */
+@media screen and (min-width: 1400px) and (max-width: 1700px) {
+  header {
+    font-size: 16px;
+  }
+
+  .description-block {
+    margin: 0% 1% 0 2.8%;
+    font-size: 19.2px;
+  }
+
+  .npm-description {
+    margin: 0 1% 0 0;
+  }
 }
